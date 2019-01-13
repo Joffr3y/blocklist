@@ -1,0 +1,6 @@
+MANIFEST.in
+*__pycache__
+*.egg-info/
+build/
+dist/
+record.txt
