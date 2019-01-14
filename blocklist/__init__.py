@@ -18,5 +18,5 @@
 """Module and command-line tool for download and write peers blocklists"""
 
 __name__ = 'blocklist'
-__version__ = '0.1.0'
+__version__ = '0.1.1'
 __author__ = 'Joffrey Darcq'
