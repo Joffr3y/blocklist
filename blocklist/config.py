@@ -14,8 +14,7 @@
 #
 # You should have received a copy of the GNU General Public licenses
 # along with Blocklist.  If not, see <https://www.gnu.org/licenses/>.
-
-r"""\
+"""\
 [Default]
 ListPath = @datadir@/peers.p2p
 
