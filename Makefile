@@ -7,7 +7,7 @@ build:
 	@$(PYTHON) ./setup.py build
 
 install:
-	$(RM) $(RECORDTXT)
+	@echo > $(RECORDTXT)
 ifdef DESTDIR
 	@$(PYTHON) ./setup.py install \
 	    --root=$(DESTDIR) \
@@ -19,6 +19,9 @@ else
 	    --optimize=1
 endif
 
+pypi:
+	$(PYTHON) ./setup.py sdist upload
+
 clean:
 	$(RM) ./{build,MANIFEST.in,*.egg-info,dist}
 	$(RM) ./blocklist/__pycache__
@@ -26,4 +29,4 @@ clean:
 uninstall: clean
 	$(RM) $(shell cat $(RECORDTXT))
 
-.PHONY: build install clean uninstall
+.PHONY: build install pypi clean uninstall

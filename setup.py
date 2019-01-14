@@ -6,7 +6,7 @@ import blocklist
 HERE = os.path.abspath(os.path.dirname(__file__))
 
 with open(os.path.join(HERE, 'MANIFEST.in'), 'w', encoding='utf-8') as f:
-    f.write('include LICENSE\ninclude README.md')
+    f.write('include LICENSE.md\ninclude README.md\ninclude blocklist/*.hpp')
 
 with open(os.path.join(HERE, 'README.md'), encoding='utf-8') as f:
     description = f.read()
@@ -30,9 +30,9 @@ setup(
     python_requires='>=3.6',
     classifiers=[
         'Environment :: Console',
-        'License :: OSI Approved :: GNU General Public License v3 (GPLv3)'
-        'Natural Language :: French'
-        'Operating System :: POSIX :: Linux'
+        'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
+        'Natural Language :: French',
+        'Operating System :: POSIX :: Linux',
         'Programming Language :: Python :: 3.7'
     ],
     keywords='python blocklist peer torrent transmission',
