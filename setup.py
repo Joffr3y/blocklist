@@ -36,6 +36,6 @@ setup(
         'Programming Language :: Python :: 3.7'
     ],
     keywords='python blocklist peer torrent transmission',
-    entry_points={'console_scripts': ['blocklist = blocklist.main:main']},
+    entry_points={'console_scripts': ['blocklist = blocklist.__main__:main']},
     ext_modules=[uimod]
 )
