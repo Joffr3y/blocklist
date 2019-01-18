@@ -13,7 +13,7 @@ with open(os.path.join(HERE, 'README.md'), encoding='utf-8') as f:
 
 uimod = Extension(
     'ui', language='c++',
-    sources=['blocklist/ui.cpp'], depends=['blocklist/ui.h'],
+    sources=['blocklist/ui.cpp'], depends=['blocklist/ui.hpp'],
 )
 
 setup(
@@ -21,6 +21,7 @@ setup(
     version=blocklist.__version__,
     description=blocklist.__doc__,
     long_description=description,
+    long_description_content_type='text/markdown',
     url='https://github.com/Joffr3y/blocklist.git',
     author=blocklist.__author__,
     author_email='j-off@live.fr',
@@ -33,7 +34,8 @@ setup(
         'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
         'Natural Language :: French',
         'Operating System :: POSIX :: Linux',
-        'Programming Language :: Python :: 3.7'
+        'Programming Language :: Python :: 3.7',
+        'Programming Language :: C++'
     ],
     keywords='python blocklist peer torrent transmission',
     entry_points={'console_scripts': ['blocklist = blocklist.__main__:main']},
