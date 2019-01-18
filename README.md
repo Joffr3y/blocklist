@@ -4,7 +4,7 @@
 **Blockist** use by default [iblocklist.com](https://www.iblocklist.com/) as lists provider, but others can be added and contributions are welcome.
 Its operation is simple, *Blocklist* recovers on a web page with a pattern all blocklists URI. Then it downloads and writes them to a file.
 
-![](screenshot.png)
+![](https://raw.githubusercontent.com/Joffr3y/blocklist/master/screenshot.png)
 
 
 ## Getting the source code
@@ -20,6 +20,13 @@ https://github.com/Joffr3y/blocklist.git
   * GCC compiler
 
 ## Installation
+For Arch Linux users, you can use the [AUR](https://aur.archlinux.org/packages/blocklist/) package.
+
+### From Pypi repository :
+```
+pip install blocklist --user
+```
+### Manually :
 ```
 python setup.py install --user
 ```
@@ -32,7 +39,7 @@ python setup.py install --user
 
 ## Usage
 ```
-blocklist --help
+$ blocklist --help
 usage: blocklist [-h] [-u] [-w] [-q]
 
 Blocklist version 0.1.0
